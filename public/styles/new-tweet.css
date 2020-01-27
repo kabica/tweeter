@@ -1,0 +1,35 @@
+section {
+  font-family: Bungee;
+}
+textarea {
+  display: flex;
+  width: 100%;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 3px solid black;
+  background-color: #f4f1ec;
+  margin-top: 10px;
+  font-family: "Source Sans Pro";
+  align-content: center;
+  height: 50px;
+  
+}
+
+/* .tweet {
+  margin-left: 0;
+}  */
+
+.flexBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-family: Bungee;
+  margin-top: 10px;
+
+}
+
+.tweet {
+  background-color: #4056A1;
+  color: white;
+}
