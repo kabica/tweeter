@@ -14,6 +14,7 @@ header {
   text-align: center;
   background-color:#6bd6b8;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+  color: white;
   
 }
 
@@ -26,5 +27,7 @@ header {
 }
 
 .name {
-  margin-top: 0px;
+  margin-top: 20px;
+  font-family: "Source Sans Pro";
+  font-size: 30px;
 }
