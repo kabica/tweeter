@@ -15,8 +15,8 @@ textarea {
   align-content: center;
   height: 50px;
   color:  #444340;
-  
-  
+  resize: none;
+  outline: 0 !important;
 }
 
 /* .tweet {
@@ -29,6 +29,7 @@ textarea {
   justify-content: space-between;
   font-family: Bungee;
   margin-top: 10px;
+  font-size: 20px;
 
 }
 
@@ -41,4 +42,5 @@ textarea {
   color: black;
   font-weight: bold;
   font-style: normal;
+  font-size: 20px;
 }
