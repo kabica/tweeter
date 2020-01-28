@@ -12,16 +12,29 @@ const validInput = function (key) {
 
 $(document).ready(function () {
   // --- our code goes here ---
+  $("#btn").on('click', () => {
+    console.log(this); //The this keyword here refers to something else!
+  });
+  
   $("textarea").on('keydown', function (key) {
     if (key.keyCode == 8) {
       if (i < 140) {
         $(".counter").text(i += 1);
+        if(i > 0) {
+          $(".counter").removeClass("colorRed")
+        }
       }
+      
     } else {
       let status = validInput(key.keyCode);
       if (status) {
         $(".counter").text(i -= 1);
-      }
+        if(i < 0) {
+          $(".counter").addClass("colorRed")
+        }
+      } 
     }
   })
 });
+
+
