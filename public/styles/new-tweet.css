@@ -19,9 +19,9 @@ textarea {
   outline: 0 !important;
 }
 
-/* .tweet {
-  margin-left: 0;
-}  */
+.colorRed {
+  color: red;
+}
 
 .flexBox {
   display: flex;
@@ -44,3 +44,109 @@ textarea {
   font-style: normal;
   font-size: 20px;
 }
+
+article {
+  height: 200px;
+  margin-top: 10px;
+  padding: 0px;
+  border: 3px solid #444340;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+article:hover {
+  box-shadow: 6px 6px rgb(142, 168, 192); 
+}
+
+
+.tweetHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75%;
+  border-bottom: 3px solid #444340;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-wrap: wrap;
+ 
+
+}
+/* .leftHeader {
+  display: flex;
+  justify-content: left;
+}
+.rightHeader {
+  display: flex;
+  justify-content: right;
+} */
+.tweetCardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 45%;
+}
+
+.leftHeader {
+  display: flex;
+}
+.leftHeader img {
+  float: left;
+  margin: 16px;
+  height: 45px;
+  
+}
+.username {
+  margin: 8px;
+  margin-top: 18px;
+}
+
+
+.rightHeader {
+  display: flex;
+}
+.handle {
+  margin: 18px;
+}
+
+.tweetCardBottom {
+  display: flex;
+  align-content: center;
+  /* justify-content: left; */
+  border-bottom: 2px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30%;
+}
+.tweetBody {
+  display: flex;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.tweetFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  font-size: 18px;
+  /* border: 2px solid red; */
+  
+}
+
+.footerLeft {
+  display: flex;
+  /* border: 2px solid red; */
+  margin-left: 16px;
+
+}
+.footerRight {
+  display: flex;
+  /* border: 2px solid red; */
+  margin-right: 16px;
+
+}
+
+
+/* #some-element { display: none; }
+#some-div:hover #some-element { display: block; } */
