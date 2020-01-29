@@ -1,12 +1,13 @@
 // client.js 
 
 jQuery(function ($) {
+  $('section').hide();
 
   // SUBMIT_TWEETS - submits newly generated tweet to database, calls getTweets after successfull post
   $("#submitTweet").submit(function (event) {
     event.preventDefault();
-    console.log($(this));
     const input = $(this).serialize();
+
     if (input === 'text=') {
       alert('Tweet is empty! Try sharing your thoughts')
     } else if (input.length > 145) {
@@ -45,5 +46,7 @@ jQuery(function ($) {
     return $tweetContainer.append($createdTweets);
   };
 });
+
+
 
 

@@ -20,22 +20,22 @@
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/createTweetElement.js"></script>
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/tweet-container.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
 </head>
+
 <body>
   <!-- Top nav bar (fixed) -->
   <nav class="fixed-top">
-    <span class="brand">tweeter</span>
-    <span class="compose"><strong>Write</strong> a new tweet</span>
+    <div>
+      <span class="brand">tweeter</span>
+    </div>
+    <div class="composeNewTweet">
+      <span class="compose"><strong>Write</strong> a new tweet</span>
+      <img onclick="toggleTweet()"
+        src="https://cdn2.iconfinder.com/data/icons/funtime-animals-humans/60/004_019_parrot_bird_animal_pet-512.png">
+    </div>
   </nav>
 
-
+  <!--  TOP OF PAGE + USER NAME WITH HEX LOGO   -->
   <header class="staticLogo">
     <div>
       <img class="logo" src="/images/profile-hex.png">
@@ -46,9 +46,9 @@
     </div>
   </header>
 
-  <!-- Page-specific (main) content here -->
+  <!--  PAGE-SPECIFIC CONTENT (TWEET HISTORY FEED) -->
   <main class="container">
-    <section class="newTweet">
+    <section id='toggleIcon' class="newTweet">
       <form id="submitTweet" action="/tweets/" method="POST">
         <textarea class="tweetText" name="text" placeholder="What are you humming about?"></textarea>
         <div class="flexBox">
@@ -58,9 +58,18 @@
 
       </form>
     </section>
+
+    <!-- NEW TWEETS + TWEET HISTORY WILL POPULATE HERE -->
     <div class="tweetHistory">
     </div>
   </main>
 
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/createTweetElement.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/toggleDisplay.js"></script>
+  <script type="text/javascript" src="/scripts/tweet-container.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </body>
+
 </html>

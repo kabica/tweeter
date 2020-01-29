@@ -1,6 +1,10 @@
 section {
   font-family: Bungee;
 }
+.toggleClass {
+  display: none;
+}
+
 textarea {
   display: flex;
   width: 100%;
