@@ -55,9 +55,9 @@ article {
   border-radius: 4px;
 }
 
-article:hover {
+/* article:hover {
   box-shadow: 6px 6px rgb(142, 168, 192); 
-}
+} */
 
 
 .tweetHeader {
@@ -136,7 +136,7 @@ article:hover {
 
 .footerLeft {
   display: flex;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   margin-left: 16px;
 
 }
