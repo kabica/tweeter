@@ -1,8 +1,15 @@
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = function (tweet) {
   const oneDay = 24 * 60 * 60 * 1000;
   const firstDate = new Date(tweet.created_at);
   const secondDate = new Date();
   const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
   const markup = `<article class="article">
   <header class="tweetCardTop">
     <div class="leftHeader">
@@ -18,7 +25,7 @@ const createTweetElement = function (tweet) {
   </header>
 
   <div class="tweetCardBottom">
-    <span class="tweetBody">${tweet.content.text}</span>
+    <span class="tweetBody">${safeHTML}</span>
   </div>
 
   <footer class="tweetFooter">
@@ -29,7 +36,7 @@ const createTweetElement = function (tweet) {
       <span>Social</span>
     </div>
   </footer>
-</article>`;
+</article> `;
 
   return markup;
 

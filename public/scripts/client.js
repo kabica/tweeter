@@ -1,28 +1,29 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-// const $input = $(this).find("input, select, button, textarea");
-
+// client.js 
 
 jQuery(function ($) {
 
   // SUBMIT_TWEETS - submits newly generated tweet to database, calls getTweets after successfull post
   $("#submitTweet").submit(function (event) {
     event.preventDefault();
+    console.log($(this));
     const input = $(this).serialize();
-    console.log(input);
+    if (input === 'text=') {
+      alert('Tweet is empty! Try sharing your thoughts')
+    } else if (input.length > 145) {
+      alert('Too much thought sharing! Check the COLOR CODED counter')
+    } else {
 
-    $.ajax({
-      url: "/tweets/",
-      method: "POST",
-      data: input
-    }).done(function (response) {
-      console.log('RESPONSE:', response);
-      getTweets();
-    })
-
+      // Async AJAX call
+      $.ajax({
+        url: "/tweets/",
+        method: "POST",
+        data: input
+      }).done((response) =>{
+        $(this).trigger("reset");
+        $(".counter").text(i = 140);
+        getTweets();
+      })
+    }
   });
 
   // GET TWEETS - requests tweet database entries (including newly generated tweet), calls renderTweets
@@ -44,6 +45,5 @@ jQuery(function ($) {
     return $tweetContainer.append($createdTweets);
   };
 });
-
 
 
