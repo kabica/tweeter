@@ -22,6 +22,7 @@
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
   <!-- App JS -->
+  <script type="text/javascript" src="/scripts/createTweetElement.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/tweet-container.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -51,7 +52,7 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="newTweet">
-      <form action="/tweets/" method="POST">
+      <form id="submitTweet" action="/tweets/" method="POST">
         <textarea class="tweetText" name="text" placeholder="What are you humming about?"></textarea>
         <div class="flexBox">
           <input class="tweet" type="submit" value="Tweet">
@@ -60,8 +61,9 @@
 
       </form>
     </section>
+    <div class="tweetHistory">
 
-    <article class="article">
+    <!-- <article class="article">
       <header class="tweetCardTop">
         <div class="leftHeader">
 
@@ -115,8 +117,8 @@
           <span>Social</span>
         </div>
       </footer>
-    </article>
-
+    </article> -->
+  </div>
   </main>
 
 </body>
