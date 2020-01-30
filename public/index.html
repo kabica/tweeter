@@ -6,6 +6,7 @@
   <title>Tweeter - Home Page</title>
   <link rel="icon" type="image/png"
     href="https://cdn2.iconfinder.com/data/icons/funtime-animals-humans/60/004_019_parrot_bird_animal_pet-512.png">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -13,6 +14,7 @@
     rel="stylesheet">
 
   <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/dynamicLayout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
@@ -22,7 +24,9 @@
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 </head>
 
-<body>
+<!---========================  OVERALL BODY OF PAGE   ==========================-->
+
+<body class="mainContainer">
   <!-- Top nav bar (fixed) -->
   <nav class="fixed-top">
     <div>
@@ -35,7 +39,9 @@
     </div>
   </nav>
 
-  <!--  TOP OF PAGE + USER NAME WITH HEX LOGO   -->
+
+  <!---================  TOP OF PAGE + USER NAME WITH HEX LOGO   ================-->
+  <div class="TWEETER">
   <header class="staticLogo">
     <div>
       <img class="logo" src="/images/profile-hex.png">
@@ -46,8 +52,11 @@
     </div>
   </header>
 
-  <!--  PAGE-SPECIFIC CONTENT (TWEET HISTORY FEED) -->
+  <!--  Tweet History Feed  -->
   <main class="container">
+    <div class="showError">
+      <div class="showError">ERROR: INVALID INPUT</div>
+    </div>
     <section id='toggleIcon' class="newTweet">
       <form id="submitTweet" action="/tweets/" method="POST">
         <textarea class="tweetText" name="text" placeholder="What are you humming about?"></textarea>
@@ -59,9 +68,11 @@
       </form>
     </section>
 
-    <!-- NEW TWEETS + TWEET HISTORY WILL POPULATE HERE -->
+    <!-- New Tweets + Tweet History Populated Here -->
     <div class="tweetHistory">
     </div>
+  </div>
+
   </main>
 
   <!-- App JS -->

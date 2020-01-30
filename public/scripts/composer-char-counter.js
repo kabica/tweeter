@@ -11,11 +11,6 @@ const validInput = function (key) {
 }
 
 $(document).ready(function () {
-  // --- our code goes here ---
-  $("#btn").on('click', () => {
-    console.log(this); //The this keyword here refers to something else!
-  });
-  
   $("textarea").on('keydown', function (key) {
     if (key.keyCode == 8) {
       if (i < 140) {
@@ -38,3 +33,17 @@ $(document).ready(function () {
 });
 
 
+// const updateCount = function() {
+//   let charsLeft = 140 - $('textarea').val().length;
+//   $('.counter').text(charsLeft);
+// }
+
+// $(document).ready(function () {
+//   updateCount();
+//   $("textarea").on('keydown', function (key) {
+//     if(validInput(key.keyCode)){
+//       updateCount();
+//     }
+//   }
+//   )
+// });

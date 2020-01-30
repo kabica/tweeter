@@ -1,14 +1,21 @@
-$(document).ready(function() {
-  $('.handle').hide();
-
-  $('.article').hover(function() {
-    $(this).find('.handle').show();
-    $(this).find('.handle').css('color' , '6px 6px rgb(00, ff, dd)')
-    $(this).css('box-shadow' , '6px 6px rgb(142, 168, 192)')
-  } , function() {
-    $(this).find('.handle').hide();
-    $(this).css('box-shadow' , "")
-    $(this).find('.handle').css('color' , '6px 6px rgb(00, ff, dd)')
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
   }
-  )
+}
+
+$(document).ready(function () {
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  $('#myBtn').on('click', function (e) {
+    e.preventDefault();
+    $('html,body').animate({
+      scrollTop: 0
+    }, 700);
+  });
 })
+

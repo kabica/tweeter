@@ -4,6 +4,18 @@ section {
 .toggleClass {
   display: none;
 }
+article:hover {
+  box-shadow: 6px 6px cyan;
+}
+
+.handle {
+  opacity: 0;
+}
+
+article:hover .handle {
+  opacity: 1;
+}
+
 
 textarea {
   display: flex;
@@ -112,6 +124,8 @@ article {
 .handle {
   margin: 18px;
 }
+
+
 
 .tweetCardBottom {
   display: flex;

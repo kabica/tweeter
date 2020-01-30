@@ -7,3 +7,19 @@ const toggleTweet= function() {
     x.style.display = "none";
   }
 }
+
+
+const underTweet = function(errorType) {
+  $(".showError").text(errorType);
+  $('.showError').slideDown();
+}
+
+const underTweetHide = function() {
+  $('.showError').slideUp();
+}
+
+const overTweet = function(errorType) {
+  $(".showError").text(errorType);
+  $('.showError').slideDown();
+}
+

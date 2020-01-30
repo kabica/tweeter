@@ -2,16 +2,18 @@
 
 jQuery(function ($) {
   $('section').hide();
-
+  $('.showError').hide();
   // SUBMIT_TWEETS - submits newly generated tweet to database, calls getTweets after successfull post
   $("#submitTweet").submit(function (event) {
     event.preventDefault();
     const input = $(this).serialize();
 
     if (input === 'text=') {
-      alert('Tweet is empty! Try sharing your thoughts')
+      underTweet('Tweet is empty! Try sharing your thoughts')
+      //alert('Tweet is empty! Try sharing your thoughts')
     } else if (input.length > 145) {
-      alert('Too much thought sharing! Check the COLOR CODED counter')
+      // alert('Too much thought sharing! Check the COLOR CODED counter')
+      overTweet('Too much thought sharing! Check the COLOR CODED counter')
     } else {
 
       // Async AJAX call
@@ -20,6 +22,7 @@ jQuery(function ($) {
         method: "POST",
         data: input
       }).done((response) =>{
+        setTimeout(underTweetHide() , 2000) ;
         $(this).trigger("reset");
         $(".counter").text(i = 140);
         getTweets();
@@ -42,6 +45,7 @@ jQuery(function ($) {
   const $tweetContainer = $(".tweetHistory");
   const renderTweets = function (tweets) {
     $tweetContainer.empty();
+    tweets.reverse();
     const $createdTweets = $(tweets.map(createTweetElement).join(" "));
     return $tweetContainer.append($createdTweets);
   };

@@ -1,14 +1,20 @@
-const escape =  function(str) {
+// ESCAPE XSS INPUT  
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
-const createTweetElement = function (tweet) {
+// GENERATE TIME STAMP FOR EACH TWEET 
+const getTimeStamp = function (tweetTime) {
   const oneDay = 24 * 60 * 60 * 1000;
-  const firstDate = new Date(tweet.created_at);
+  const firstDate = new Date(tweetTime);
   const secondDate = new Date();
-  const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  return Math.round(Math.abs((firstDate - secondDate) / oneDay));
+}
+
+// XSS AVOIDANCE + MARKUP POPULATING
+const createTweetElement = function (tweet) {
   const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
   const markup = `<article class="article">
   <header class="tweetCardTop">
@@ -30,7 +36,7 @@ const createTweetElement = function (tweet) {
 
   <footer class="tweetFooter">
     <div class="footerLeft">
-      <span>${diffDays} days ago</span>
+      <span>${getTimeStamp(tweet.created_at)} days ago</span>
     </div>
     <div class="footerRight">
       <span>Social</span>
@@ -39,6 +45,4 @@ const createTweetElement = function (tweet) {
 </article> `;
 
   return markup;
-
 }
-
