@@ -10,12 +10,9 @@ jQuery(function ($) {
 
     if (input === 'text=') {
       underTweet('Tweet is empty! Try sharing your thoughts')
-      //alert('Tweet is empty! Try sharing your thoughts')
     } else if (input.length > 145) {
-      // alert('Too much thought sharing! Check the COLOR CODED counter')
       overTweet('Too much thought sharing! Check the COLOR CODED counter')
     } else {
-
       // Async AJAX call
       $.ajax({
         url: "/tweets/",

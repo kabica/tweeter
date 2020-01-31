@@ -1,35 +1,96 @@
-/*
-- The header should have a height of 400px and be 100% the width of it's parent container
-- The avatar should be centered vertically and horizontally (Hint: you may have to play around with position: relative - and position: absolute to properly position the avatar)
-- The name should be centered below the avatar
-- The background should be a different colour than the nav and the body
-*/
-
-
 .staticLogo {
-  height: 400px;
   width: 100%;
-  position: relative;
-  margin-top: 120px;
   text-align: center;
   background-color:#6bd6b8;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
   color: white;
   
 }
-
-
-
 .logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: auto;
 }
-
 .name {
   margin-top: 20px;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro" , serif;
   font-size: 30px;
-  
 }
+
+@media screen and (max-width:768px) {
+  /* BODY */
+  .mainContainer {
+    display: flex;
+  }
+  /* ERROR + NEW + TWEET */
+  .container {
+    margin-top: 200px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+  }
+  /* HEADER BANNER WITH OWL LOGO AND TURQOISE BACKGROUND */
+  .staticLogo {
+    max-width: 30%;
+    max-height: 360px;
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .logo {
+    height: 200px;
+    margin-top: 30px;
+  }
+  /* NAME: Alexander Bica */
+  .name {
+    margin-bottom: 50px;
+  }
+  nav {
+     background-color: transparent;
+  }
+}
+
+
+
+@media screen and (min-width:1020px) {
+  /* BODY */
+  .mainContainer {
+    display: flex;
+  }
+  /* ERROR MESSAGE + NEW + TWEET */
+  .container {
+    margin-top: 200px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+  }
+  /* HEADER BANNER WITH OWL LOGO AND TURQOISE BACKGROUND */
+  .staticLogo {
+    max-width: 30%;
+    max-height: 360px;
+    margin-top: 200px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  /* OWL IMAGE*/
+  .logo {
+    height: 200px;
+    margin-top: 30px;
+  }
+  /* NAME: Alexander Bica */
+  .name {
+    margin: auto;
+  }
+  nav {
+     background-color: #4056A1;
+  }
+};
+
+
+
+
+
+
+
+

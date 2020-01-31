@@ -1,6 +1,8 @@
 i = 140;
+// Array of key codes that will not be considered as valid input
 let rejectArr = [9, 13, 16, 17, 18, 20, 91, 37, 38, 39, 40];
 
+// Validates if key entered in tweet submission form is 'valid' 
 const validInput = function (key) {
   for (let i = 0; i < rejectArr.length; i++) {
     if (rejectArr[i] === key) {
@@ -9,7 +11,7 @@ const validInput = function (key) {
   }
   return true;
 }
-
+// Function will reject keys that are not considered as alphanumeric input (CTRL , ALT , SHIFT , etc.)
 $(document).ready(function () {
   $("textarea").on('keydown', function (key) {
     if (key.keyCode == 8) {
@@ -33,17 +35,4 @@ $(document).ready(function () {
 });
 
 
-// const updateCount = function() {
-//   let charsLeft = 140 - $('textarea').val().length;
-//   $('.counter').text(charsLeft);
-// }
 
-// $(document).ready(function () {
-//   updateCount();
-//   $("textarea").on('keydown', function (key) {
-//     if(validInput(key.keyCode)){
-//       updateCount();
-//     }
-//   }
-//   )
-// });
