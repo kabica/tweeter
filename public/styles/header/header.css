@@ -18,31 +18,60 @@
   font-size: 30px;
 }
 
-
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   /* BODY */
   .mainContainer {
     display: flex;
+    flex-direction: column;
   }
   /* ERROR + NEW + TWEET */
   .container {
-    margin-top: 200px;
+    margin-top: 20px;
     margin-right: 40px;
     margin-left: 40px;
 
   }
   /* HEADER BANNER WITH OWL LOGO AND TURQOISE BACKGROUND */
   .staticLogo {
-    max-width: 30%;
+    width: 100%;
     max-height: 360px;
-    margin-top: 0px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-top: 120px;
   }
   .logo {
     height: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+  /* NAME: Alexander Bica */
+  .name {
+    margin-bottom: 50px;
+  }
+  nav {
+     background-color: #4056A1;
+  }
+}
+
+@media screen and (min-width:768px) {
+  /* BODY */
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  /* ERROR + NEW + TWEET */
+  .container {
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+  }
+  /* HEADER BANNER WITH OWL LOGO AND TURQOISE BACKGROUND */
+  .staticLogo {
+    width: 100%;
+    max-height: 400px;
+    margin-top: 0px;
+  }
+  .logo {
+    height: 200px;
+    margin-top: 120px;
   }
   /* NAME: Alexander Bica */
   .name {
@@ -53,12 +82,11 @@
   }
 }
 
-
-
 @media screen and (min-width:1020px) {
   /* BODY */
   .mainContainer {
     display: flex;
+    flex-direction: row;
   }
   /* ERROR MESSAGE + NEW + TWEET */
   .container {
