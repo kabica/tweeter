@@ -1,10 +1,11 @@
 const toggleTweet= function() {
   var x = document.getElementById("toggleIcon");
   if (x.style.display === "none") {
-    x.style.display = "block";
+    $('.newTweet').slideDown();
     $("textarea").focus();
   } else {
-    x.style.display = "none";
+    // x.style.display = "none";
+    $('.newTweet').slideUp();
   }
 }
 

@@ -11,9 +11,16 @@ article:hover {
 .handle {
   opacity: 0;
 }
-
 article:hover .handle {
   opacity: 1;
+}
+.social1 {
+  height: 12px;
+  margin: 0.25em;
+}
+.social2 {
+  height: 14px;
+  margin-top: 0.25em;
 }
 
 

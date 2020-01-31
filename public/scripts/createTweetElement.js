@@ -39,7 +39,13 @@ const createTweetElement = function (tweet) {
       <span>${getTimeStamp(tweet.created_at)} days ago</span>
     </div>
     <div class="footerRight">
-      <span>Social</span>
+      
+      <img class="social1"
+        src="https://cdn2.iconfinder.com/data/icons/flags-6/512/flag-9-512.png">
+        <img class="social2"
+        src="https://cdn3.iconfinder.com/data/icons/universal-web-mobile-6-7/48/510-256.png">
+        <img class="social1"
+        src="https://cdn3.iconfinder.com/data/icons/user-interface-buttons/64/_Part_Favourite-256.png">
     </div>
   </footer>
 </article> `;
