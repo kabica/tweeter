@@ -3,6 +3,7 @@
 jQuery(function ($) {
   $('section').hide();
   $('.showError').hide();
+
   // SUBMIT_TWEETS - submits newly generated tweet to database, calls getTweets after successfull post
   $("#submitTweet").submit(function (event) {
     event.preventDefault();
@@ -46,6 +47,8 @@ jQuery(function ($) {
     const $createdTweets = $(tweets.map(createTweetElement).join(" "));
     return $tweetContainer.append($createdTweets);
   };
+
+  getTweets();
 });
 
 
