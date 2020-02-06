@@ -17,6 +17,9 @@ nav img {
   margin-left: 60px;
   margin-top: 10px;
 }
+nav img:hover {
+  cursor: pointer;
+}
  /* FORM FOR NEW TEST ENTRY */
 nav .composeNewTweet {
   display: flex;
