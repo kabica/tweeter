@@ -1,3 +1,7 @@
+/* new-tweet.css */
+
+
+/** -- TWEET HISTORY -- **/
 section {
   font-family: Bungee;
 }
@@ -7,23 +11,29 @@ section {
 article:hover {
   box-shadow: 6px 6px cyan;
 }
-
 .handle {
   opacity: 0;
-}
-article:hover .handle {
-  opacity: 1;
 }
 .social1 {
   height: 12px;
   margin: 0.25em;
+  opacity: 0;
 }
 .social2 {
   height: 14px;
   margin-top: 0.25em;
 }
+article:hover .handle {
+  opacity: 1;
+}
+article:hover .social1 {
+  opacity: 1;
+}
+input:hover {
+  cursor: pointer;
+}
 
-
+/** -- NEW TWEET TEXT INPUT -- **/
 textarea {
   display: flex;
   width: 100%;
@@ -41,11 +51,9 @@ textarea {
   resize: none;
   outline: 0 !important;
 }
-
 .colorRed {
   color: red;
 }
-
 .flexBox {
   display: flex;
   width: 100%;
@@ -53,21 +61,17 @@ textarea {
   font-family: Bungee;
   margin-top: 10px;
   font-size: 20px;
-
 }
-
 .tweet {
   background-color: #4056A1;
   color: white;
 }
-
 ::placeholder {
   color: black;
   font-weight: bold;
   font-style: normal;
   font-size: 20px;
 }
-
 article {
   height: 200px;
   margin-top: 10px;
@@ -77,12 +81,6 @@ article {
   flex-direction: column;
   border-radius: 4px;
 }
-
-/* article:hover {
-  box-shadow: 6px 6px rgb(142, 168, 192); 
-} */
-
-
 .tweetHeader {
   display: flex;
   flex-direction: column;
@@ -92,17 +90,7 @@ article {
   margin-left: 10px;
   margin-right: 10px;
   flex-wrap: wrap;
- 
-
 }
-/* .leftHeader {
-  display: flex;
-  justify-content: left;
-}
-.rightHeader {
-  display: flex;
-  justify-content: right;
-} */
 .tweetCardTop {
   display: flex;
   flex-direction: row;
@@ -110,6 +98,7 @@ article {
   height: 45%;
 }
 
+/** -- USER AVATAR, NAME & HANDLE -- **/
 .leftHeader {
   display: flex;
 }
@@ -117,14 +106,11 @@ article {
   float: left;
   margin: 16px;
   height: 45px;
-  
 }
 .username {
   margin: 8px;
   margin-top: 18px;
 }
-
-
 .rightHeader {
   display: flex;
 }
@@ -132,12 +118,25 @@ article {
   margin: 18px;
 }
 
-
-
+/** -- FOOTER -- **/
+.tweetFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.footerLeft {
+  display: flex;
+  margin-left: 16px;
+}
+.footerRight {
+  display: flex;
+  margin-right: 16px;
+}
 .tweetCardBottom {
   display: flex;
   align-content: center;
-  /* justify-content: left; */
   border-bottom: 2px solid black;
   margin-left: 10px;
   margin-right: 10px;
@@ -148,30 +147,3 @@ article {
   margin-left: 20px;
   font-size: 20px;
 }
-
-.tweetFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 10px;
-  font-size: 18px;
-  /* border: 2px solid red; */
-  
-}
-
-.footerLeft {
-  display: flex;
-  /* border: 2px solid red; */
-  margin-left: 16px;
-
-}
-.footerRight {
-  display: flex;
-  /* border: 2px solid red; */
-  margin-right: 16px;
-
-}
-
-
-/* #some-element { display: none; }
-#some-div:hover #some-element { display: block; } */
