@@ -48,6 +48,7 @@ jQuery(function ($) {
     return $tweetContainer.append($createdTweets);
   };
 
+  // Populate tweet history on page load 
   getTweets();
 });
 
