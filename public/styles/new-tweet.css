@@ -147,3 +147,13 @@ article {
   margin-left: 20px;
   font-size: 20px;
 }
+
+
+.scrollToTop {
+  display: none;
+  width: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+}
