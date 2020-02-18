@@ -10,7 +10,8 @@ const getTimeStamp = function (tweetTime) {
   const oneDay = 24 * 60 * 60 * 1000;
   const firstDate = new Date(tweetTime);
   const secondDate = new Date();
-  return Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  let result = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  return (result === 0) ? 'just now' : `${result} days ago`
 }
 
 // XSS AVOIDANCE + MARKUP POPULATING
@@ -36,7 +37,7 @@ const createTweetElement = function (tweet) {
 
   <footer class="tweetFooter">
     <div class="footerLeft">
-      <span>${getTimeStamp(tweet.created_at)} days ago</span>
+      <span>${getTimeStamp(tweet.created_at)}</span>
     </div>
     <div class="footerRight">
       

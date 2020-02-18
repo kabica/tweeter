@@ -10,6 +10,7 @@ nav {
   display: flex;
   
 }
+
  /* TUCAN IMG THAT TOGGLES NEW TWEET ENTRY */
 nav img {
   height: 20px;
@@ -20,6 +21,17 @@ nav img {
 nav img:hover {
   cursor: pointer;
 }
+/* MAKE THE TUCAN DANCE*/
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+.tucan {
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
  /* FORM FOR NEW TEST ENTRY */
 nav .composeNewTweet {
   display: flex;
